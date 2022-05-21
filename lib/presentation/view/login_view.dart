@@ -1,4 +1,4 @@
-import 'package:cha_qaqc_department_mobile_app/domain/entities/qc_data.dart';
+
 import 'package:flutter/material.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/bloc/login_bloc.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/event/login_event.dart';
@@ -9,7 +9,6 @@ import 'package:cha_qaqc_department_mobile_app/utils/password_preferences.dart';
 import 'package:cha_qaqc_department_mobile_app/utils/username_preferences.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'global.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -184,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 EdgeInsets.only(), // add padding to adjust icon
                             child: Icon(
                               Icons.assignment_ind_outlined,
-                              size: 20,
+                              size: 30,
                             ),
                           ),
                           hintText: 'Tên Đăng Nhập',
@@ -224,8 +223,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               padding: EdgeInsets
                                   .only(), // add padding to adjust icon
                               child: Icon(
-                                Icons.assignment_ind_outlined,
-                                size: 20,
+                                Icons.vpn_key,
+                                size: 30,
                               ),
                             ),
                             hintText: 'Mật Khẩu',

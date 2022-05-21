@@ -1,5 +1,4 @@
-import 'dart:convert';
-import 'dart:typed_data';
+
 
 import 'package:cha_qaqc_department_mobile_app/domain/entities/qa_data.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/widgets/constant.dart';
@@ -42,9 +41,9 @@ class InformationErrorScreen extends StatelessWidget {
                     height: SizeConfig.screenheight * 0.05,
                   ),
                   Image(
-                    image: const AssetImage('lib/assets/pas_cong_biendang.PNG'),
+                    image: const AssetImage('lib/assets/bavie_nap_ban_cau.PNG'),
                     //width: SizeConfig.screenWidth * 0.5,
-                    height: SizeConfig.screenWidth * 0.3,
+                    height: SizeConfig.screenWidth * 0.4,
                   ),
                   SizedBox(
                     height: SizeConfig.screenheight * 0.005,
@@ -52,14 +51,14 @@ class InformationErrorScreen extends StatelessWidget {
                   Text(
                     'Mô tả:',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 25,
                       decoration: TextDecoration.underline,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     'Chiều cao ≤ 0.1 mm, không sắc nhọn, không ảnh hưởng lắp ráp, quan sát bằng mắt, tần suất: AQL 0.4 / Lot ',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 25),
                   )
                 ],
               ),

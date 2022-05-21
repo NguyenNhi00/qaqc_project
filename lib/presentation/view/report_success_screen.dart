@@ -28,7 +28,7 @@ class ReportDoneScreen extends StatelessWidget {
       ),
       SizedBox(height: SizeConfig.screenheight * 0.1),
       SizedBox(
-        width: SizeConfig.screenWidth * 0.198,
+        width: SizeConfig.screenWidth * 0.423,
         height: SizeConfig.screenheight * 0.0815,
         child: ElevatedButton(
             onPressed: () {
@@ -49,7 +49,7 @@ class ReportDoneScreen extends StatelessWidget {
                   MaterialStateProperty.all<Color>(Color(0xff001D37)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0))),
+                      borderRadius: BorderRadius.circular(27.0))),
             )),
       ),
     ]);

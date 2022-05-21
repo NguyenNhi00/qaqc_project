@@ -3,7 +3,6 @@
 import 'package:cha_qaqc_department_mobile_app/domain/entities/qa_data.dart';
 import 'package:cha_qaqc_department_mobile_app/domain/entities/qc_data.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/view/global.dart';
-import 'package:cha_qaqc_department_mobile_app/presentation/widgets/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -41,9 +40,7 @@ class _TextFieldDimesionState extends State<TextFieldDimesion> {
   Widget build(BuildContext context) {
     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
       // ignore: sized_box_for_whitespace
-      Container(
-        width: SizeConfig.screenWidth * 0.1762,
-        child: Expanded(
+         Expanded(
           child: ListView.builder(
             reverse: true,
             shrinkWrap: true,
@@ -114,6 +111,8 @@ class _TextFieldDimesionState extends State<TextFieldDimesion> {
                           // }
                         },
                         decoration: InputDecoration(
+                          fillColor: Colors.grey[20],
+                          filled: true,
                             hintText: "Nhập Kích Thước",
                             hintStyle: TextStyle(fontSize: 15),
                             contentPadding: EdgeInsets.symmetric(
@@ -154,7 +153,7 @@ class _TextFieldDimesionState extends State<TextFieldDimesion> {
             },
           ),
         ),
-      ),
+      
 
       SizedBox(
         width: 5,

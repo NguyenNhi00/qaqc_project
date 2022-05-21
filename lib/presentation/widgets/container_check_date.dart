@@ -23,7 +23,7 @@ class _ContainerCheckDateState extends State<ContainerCheckDate> {
         children: [
           Text(
             '${_selectedDateView}',
-            style: TextStyle(fontSize: 17.0),
+            style: TextStyle(fontSize: 20.0),
           ),
           SizedBox(width: 60),
           IconButton(
@@ -36,7 +36,9 @@ class _ContainerCheckDateState extends State<ContainerCheckDate> {
               )),
         ],
       ),
-      decoration: BoxDecoration(border: Border.all()),
+      decoration: BoxDecoration(
+        color: Colors.blueGrey[100],
+        border: Border.all()),
     );
   }
 
@@ -52,7 +54,7 @@ class _ContainerCheckDateState extends State<ContainerCheckDate> {
                 colorScheme: ColorScheme.dark(
                     primary: Colors.deepPurple,
                     onPrimary: Colors.white,
-                    surface: Constants.mainColor,
+                    surface: Colors.brown,
                     onSurface: Colors.black),
                 dialogBackgroundColor: Colors.white,
               ),

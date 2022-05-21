@@ -14,6 +14,7 @@ class AutocompleteTextfieldMachine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.grey[10],
       width: SizeConfig.screenWidth * 0.24,
       height: SizeConfig.screenheight * 0.0664,
       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -28,6 +29,8 @@ class AutocompleteTextfieldMachine extends StatelessWidget {
         suggestions: _itemsList,
         style: TextStyle(color: Colors.black, fontSize: 17),
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.grey[20],
           hintText: 'Nhập',
           hintStyle: TextStyle(fontSize: 16),
           contentPadding:
@@ -71,6 +74,7 @@ class AutocompleteTextfieldMold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.grey[10],
       width: SizeConfig.screenWidth * 0.24,
       height: SizeConfig.screenheight * 0.0664,
       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -85,6 +89,8 @@ class AutocompleteTextfieldMold extends StatelessWidget {
         suggestions: _itemsList,
         style: TextStyle(color: Colors.black, fontSize: 17),
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.grey[20],
             hintText: 'Nhập',
             hintStyle: TextStyle(fontSize: 16),
             contentPadding:

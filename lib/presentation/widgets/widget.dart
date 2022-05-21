@@ -71,7 +71,7 @@ class TopicText extends StatelessWidget {
       padding: EdgeInsets.only(left: SizeConfig.screenWidth * 0.0156),
       child: Text(
         text,
-        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 23.0, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -99,7 +99,9 @@ class ContainerText extends StatelessWidget {
             style: TextStyle(fontSize: 17),
           ),
         ),
-        decoration: BoxDecoration(border: Border.all(color: Colors.black)));
+        decoration: BoxDecoration(
+          color: Colors.blueGrey[100],
+          border: Border.all(color: Colors.black)));
   }
 }
 
@@ -114,7 +116,7 @@ class ContainerTextDimenion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: SizeConfig.screenheight * 0.0797,
-        width: SizeConfig.screenWidth * 0.2171,
+        width: SizeConfig.screenWidth * 0.1771,
         // ignore: unnecessary_string_interpolations
         child: Center(
           child: Text(
@@ -123,7 +125,9 @@ class ContainerTextDimenion extends StatelessWidget {
             style: TextStyle(fontSize: 20),
           ),
         ),
-        decoration: BoxDecoration(border: Border.all(color: Colors.grey)));
+        decoration: BoxDecoration(
+          color: Colors.blueGrey[200],
+          border: Border.all(color: Colors.grey)));
   }
 }
 
@@ -244,6 +248,7 @@ class InputTextFieldNumberProduct extends StatelessWidget {
     TextEditingController controllernNumberProduct = TextEditingController();
     // ignore: sized_box_for_whitespace
     return Container(
+      color: Colors.grey[10],
         height: SizeConfig.screenheight * 0.0664,
         width: SizeConfig.screenWidth * 0.22,
         child: TextField(
@@ -260,6 +265,8 @@ class InputTextFieldNumberProduct extends StatelessWidget {
             print(Global.qcReport);
           },
           decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.grey[20],
               hintText: "Nhập số lượng kiểm",
               hintStyle: TextStyle(fontSize: 15),
               contentPadding:

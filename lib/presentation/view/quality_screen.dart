@@ -41,8 +41,11 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
   bool pdfView = false;
   List<Standard> _standard = [];
   List<String> producId = [];
-  List<String> machineId = ['M25', 'M26', 'MA22', 'MS600'];
-  List<String> molId = ['KM1', 'KM2', 'KM3'];
+  List<String> machineId = ['L25', 'M26', 'L10', 'MS600'];
+  List<String> molId = ['B109','B075','B074','B074','B272','B015','B223','B223','B075','B009','K045',
+'B051','B227','B096','B111','B169','B070','B109','B099','B069','B063','B118','K044','K044','B061','B061',
+'GC05','GC05','K076','K076','B074','B074','K055','B062-2'
+];
   late QcTester _qcTester;
   String idSelector = '';
   int _numberDimension = 0;
@@ -384,6 +387,8 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                     alignment: Alignment.center,
                                     child: DropdownSearch<String>(
                                       dropdownSearchDecoration: InputDecoration(
+                                         filled: true,
+                                         fillColor: Colors.grey[20],
                                           contentPadding: EdgeInsets.only(
                                               left: SizeConfig.screenWidth *
                                                   0.0781)),
@@ -511,7 +516,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                     child: Text(
                                       'KÍCH THƯỚC',
                                       style: TextStyle(
-                                          fontSize: 20,
+                                          fontSize: 23,
                                           fontWeight: FontWeight.bold),
                                     ))
                               ],
@@ -522,7 +527,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                             Row(
                               children: [
                                 SizedBox(
-                                  width: SizeConfig.screenWidth * 0.1081,
+                                  width: SizeConfig.screenWidth * 0.0881,
                                 ),
                                 Text(
                                   'Chuẩn',
@@ -531,7 +536,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  width: SizeConfig.screenWidth * 0.1371,
+                                  width: SizeConfig.screenWidth * 0.1071,
                                 ),
                                 Text(
                                   'Kết Quả Đo',
@@ -764,7 +769,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                     child: Text(
                                       'NGOẠI QUAN',
                                       style: TextStyle(
-                                          fontSize: 20,
+                                          fontSize: 23,
                                           fontWeight: FontWeight.bold),
                                     )),
                               ],
@@ -782,7 +787,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                   bottom: SizeConfig.screenheight * 0.1329,
                                   left: SizeConfig.screenWidth * 0.3515),
                               child: SizedBox(
-                                width: SizeConfig.screenWidth * 0.3562,
+                                width: SizeConfig.screenWidth * 0.662,
                                 height: SizeConfig.screenheight * 0.1063,
                                 child: ElevatedButton(
                                   onPressed: () {
@@ -957,17 +962,28 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                 // LoadingDialog(context).show();
                 return
                 Container(
-                  margin: EdgeInsets.all(200),
+                  margin: EdgeInsets.all(150),
                   child: Center(
-                    child: Dialog(
-                      backgroundColor: Colors.white,
-                                  insetAnimationDuration: Duration(seconds: 15),
-                                  child: Column(children: [
-                                    Icon(Icons.touch_app_outlined ,size: 150, color: Constants.mainColor,),
-                                    SizedBox(height: SizeConfig.screenheight*0.05,),
-                                    Text('Đăng nhập thành công',style: TextStyle(color: Constants.mainColor,fontSize: 40,fontWeight: FontWeight.bold),),
-                      
-                                  ],),),
+                    child: Container(
+                      width: 600,
+                      height: 400,
+                      color: Constants.mainColor,
+                      child: Dialog(
+                                    insetAnimationDuration: Duration(seconds: 15),
+                                    child: Column(children: [
+                                      Icon(Icons.touch_app_outlined ,size: 150, color: Constants.mainColor,),
+                                      SizedBox(height: SizeConfig.screenheight*0.05,),
+                                      Row(
+                                        children: [
+                                          SizedBox(width: 20,),
+                                          Text('Đăng nhập thành công',style: TextStyle(color: Constants.mainColor,fontSize: 40,fontWeight: FontWeight.bold),),
+                                          SizedBox(width: 10,),
+                                          Icon(Icons.library_add_check_outlined, size: 50,color: Constants.mainColor,)
+                                        ],
+                                      ),
+                        
+                                    ],),),
+                    ),
                   ),
                 );
                 //  Center(
