@@ -788,7 +788,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                   left: SizeConfig.screenWidth * 0.3515),
                               child: SizedBox(
                                 width: SizeConfig.screenWidth * 0.662,
-                                height: SizeConfig.screenheight * 0.1063,
+                                height: SizeConfig.screenheight * 0.0915,
                                 child: ElevatedButton(
                                   onPressed: () {
                                     BlocProvider.of<ReportBloc>(context).add(
@@ -803,10 +803,12 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                   child: const Text(
                                     'XÁC NHẬN',
                                     style: TextStyle(
-                                        fontSize: 25.0,
+                                        fontSize: 35.0,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   style: ButtonStyle(
+                                    shadowColor: MaterialStateProperty.all<Color>(Constants.mainColor),
+                                    elevation: MaterialStateProperty.all(15),
                                       backgroundColor:
                                           MaterialStateProperty.all<Color>(
                                         const Color(0xff001D37),
@@ -815,7 +817,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                               RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(30)))),
+                                                  BorderRadius.circular(25)))),
                                 ),
                               ),
                             ),

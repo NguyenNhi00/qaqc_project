@@ -28,17 +28,19 @@ class Home extends StatelessWidget {
             height: SizeConfig.screenheight * 0.0837,
           ),
           SizedBox(
-            width: SizeConfig.screenWidth * 0.7,
-            height: SizeConfig.screenheight * 0.0815,
+            width: SizeConfig.screenWidth * 0.45,
+            height: SizeConfig.screenheight * 0.0915,
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/second');
               },
               child: const Text(
                 'ĐĂNG NHẬP',
-                style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
               ),
               style: ButtonStyle(
+                 shadowColor: MaterialStateProperty.all<Color>(Constants.mainColor),
+                  elevation: MaterialStateProperty.all(15),
                   backgroundColor: MaterialStateProperty.all<Color>(
                     const Color(0xff001D37),
                   ),

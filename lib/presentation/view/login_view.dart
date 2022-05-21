@@ -270,7 +270,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Container(
                         width: SizeConfig.screenWidth * 0.3,
-                        height: SizeConfig.screenheight * 0.0815,
+                        height: SizeConfig.screenheight * 0.0915,
                         padding: EdgeInsets.only(
                             left: SizeConfig.screenWidth * 0.2109,
                             right: SizeConfig.screenWidth * 0.2109),
@@ -278,6 +278,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: SizeConfig.screenWidth * 0.3,
                           child: ElevatedButton(
                             style: ButtonStyle(
+                              shadowColor: MaterialStateProperty.all<Color>(Constants.mainColor),
+                              elevation: MaterialStateProperty.all(15),
+                             // shadowColor: MaterialStateProperty.all<Color>(Colors.teal),
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(
                                         Constants.mainColor),
@@ -285,7 +288,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                         borderRadius:
-                                            BorderRadius.circular(30)))),
+                                            BorderRadius.circular(25)))),
                             onPressed: () {
                               // (userController.text == "" ||
                               //         passController.text == "" ||
@@ -304,7 +307,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                             child: Text(
                               'ĐĂNG NHẬP',
-                              style: TextStyle(fontSize: 25.0),
+                              style: TextStyle(fontSize: 35.0),
                             ),
                           ),
                         ),

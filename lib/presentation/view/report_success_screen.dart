@@ -28,8 +28,8 @@ class ReportDoneScreen extends StatelessWidget {
       ),
       SizedBox(height: SizeConfig.screenheight * 0.1),
       SizedBox(
-        width: SizeConfig.screenWidth * 0.423,
-        height: SizeConfig.screenheight * 0.0815,
+        width: SizeConfig.screenWidth * 0.45,
+        height: SizeConfig.screenheight * 0.0915,
         child: ElevatedButton(
             onPressed: () {
               Navigator.pushNamed(context, '/third');
@@ -40,16 +40,18 @@ class ReportDoneScreen extends StatelessWidget {
             child: Center(
               child: Text(
                 'TIẾP TỤC',
-                style: TextStyle(fontSize: 25.0),
+                style: TextStyle(fontSize: 35.0),
               ),
             ),
             style: ButtonStyle(
+              shadowColor: MaterialStateProperty.all<Color>(Constants.mainColor),
+              elevation: MaterialStateProperty.all(15),
               alignment: Alignment.bottomLeft,
               backgroundColor:
                   MaterialStateProperty.all<Color>(Color(0xff001D37)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(27.0))),
+                      borderRadius: BorderRadius.circular(25.0))),
             )),
       ),
     ]);
