@@ -4,6 +4,8 @@ import 'package:cha_qaqc_department_mobile_app/data/model/qa_model.dart';
 import 'package:cha_qaqc_department_mobile_app/domain/entities/qa_data.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/view/global.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/widgets/constant.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class FetchQaDataService {
@@ -57,8 +59,9 @@ class FetchQaDataService {
       }
       return uint8list;
     } catch (e) {
-      print(e);
-      throw Exception('');
+       print(e);
+     throw Exception();
+      
     }
   }
 }

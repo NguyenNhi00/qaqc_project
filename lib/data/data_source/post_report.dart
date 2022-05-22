@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:cha_qaqc_department_mobile_app/domain/entities/qc_data.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/view/global.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/widgets/constant.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
 class PostReportService {
@@ -66,6 +67,7 @@ class PostReportService {
     } else {
       bodyJson = [];
       bodyJsonErr = [];
+      Container();
       print(res.statusCode);
       throw Exception('Post process failed !');
     }
