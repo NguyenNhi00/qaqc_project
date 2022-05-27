@@ -49,7 +49,16 @@ class ConfirmDialog {
         height: 70,
         width: double.infinity,
         color: Constants.mainColor,
-        child: Center(child: Text('XÁC NHẬN', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),))),
+        child:  Row(
+          children: [
+            SizedBox(width: 120,),
+            Text('XÁC NHẬN', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),),
+            SizedBox(width: 70,),
+            IconButton(onPressed: (){
+              Navigator.pop(context);
+            }, icon: Icon(Icons.cancel_presentation_rounded, size: 35,color: Colors.red,))
+          ],
+        )),
       content: Text(
         'Bạn Có Chắc Chắn Muốn Xác Nhận?',
         style: TextStyle(fontSize: 25, color:Constants.mainColor),

@@ -9,4 +9,5 @@ abstract class Global {
   static bool processPostData = false;
   static QcReport qcReport =
       QcReport( null,null,null, null, null, [], [], null);
+  static List<QcReport> qcReportList = [];
 }

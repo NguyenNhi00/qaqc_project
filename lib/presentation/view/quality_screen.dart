@@ -39,6 +39,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
   String checkingDate = DateFormat('MM/dd/yyyy').format(DateTime.now());
   bool visible = false;
   bool pdfView = false;
+  List<QcReport> qcReportList = [];
   List<Standard> _standard = [];
   List<String> producId = [];
   List<String> machineId = ['L25', 'M26', 'L10', 'MS600'];
@@ -779,7 +780,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                             ),
                             RadioMethod(_standard),
                             SizedBox(
-                              height: SizeConfig.screenheight * 0.2698,
+                              height: SizeConfig.screenheight * 0.1098,
                             ),
                             Container(
                               height: SizeConfig.screenheight * 0.2260,
@@ -799,6 +800,7 @@ class _QuanlityScreenState extends State<QuanlityScreen> {
                                       Global.qcReport.appearanceErrors
                                           ?.add(AppearanceError(''));
                                     }
+                                Global.qcReportList.add(Global.qcReport);
                                   },
                                   child: const Text(
                                     'XÁC NHẬN',

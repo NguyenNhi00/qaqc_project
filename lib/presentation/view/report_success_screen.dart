@@ -10,7 +10,7 @@ class ReportDoneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Column(children: [
-      SizedBox(height: SizeConfig.screenheight * 0.1531),
+      SizedBox(height: SizeConfig.screenheight * 0.1031),
       Center(
         child: Icon(
           Icons.check_circle_outline_rounded,
@@ -45,6 +45,32 @@ class ReportDoneScreen extends StatelessWidget {
             ),
             style: ButtonStyle(
               shadowColor: MaterialStateProperty.all<Color>(Constants.mainColor),
+              elevation: MaterialStateProperty.all(15),
+              alignment: Alignment.bottomLeft,
+              backgroundColor:
+                  MaterialStateProperty.all<Color>(Color(0xff001D37)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0))),
+            )),
+      ),
+       SizedBox(height: SizeConfig.screenheight * 0.04),
+      SizedBox(
+        width: SizeConfig.screenWidth * 0.45,
+        height: SizeConfig.screenheight * 0.0915,
+        child: ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/five');
+            },
+            child: Center(
+              child: Text(
+                'LỊCH SỬ',
+                style: TextStyle(fontSize: 35.0),
+              ),
+            ),
+            style: ButtonStyle(
+              shadowColor:
+                  MaterialStateProperty.all<Color>(Constants.mainColor),
               elevation: MaterialStateProperty.all(15),
               alignment: Alignment.bottomLeft,
               backgroundColor:

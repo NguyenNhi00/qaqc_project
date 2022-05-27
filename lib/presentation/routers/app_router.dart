@@ -1,5 +1,6 @@
 
 import 'package:cha_qaqc_department_mobile_app/domain/entities/qa_data.dart';
+import 'package:cha_qaqc_department_mobile_app/presentation/view/history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:cha_qaqc_department_mobile_app/injector.dart';
 import 'package:cha_qaqc_department_mobile_app/presentation/bloc/login_bloc.dart';
@@ -34,6 +35,7 @@ class AppRouter {
                 )
           );
       case '/four': return MaterialPageRoute(builder: (context)=>ReportDoneScreen());
+      case '/five': return MaterialPageRoute(builder: (context)=>HistoryScreen());
       default:
         return MaterialPageRoute(builder: (context) => Home());
     }

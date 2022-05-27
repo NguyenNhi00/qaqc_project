@@ -85,7 +85,7 @@ class _RadioMethodState extends State<RadioMethod> {
                                   width: 350,
                                   child: TextAnnotation(
                                       text: standar[Global.i]
-                                          .appearanceErrors![index]
+                                          .appearanceErrors![index].name
                                           .toString())),
                               SizedBox(
                                 width: 30,
